@@ -1,0 +1,16 @@
+{
+  "name": "jotc-settings-archive",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "JOTC 小说设定集可视化（VitePress 文档站）",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}

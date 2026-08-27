@@ -1,0 +1,39 @@
+{
+  "universes": [
+    {
+      "id": "general",
+      "name": "多元宇宙",
+      "en": "Multiverse",
+      "color": "#6d4bd8",
+      "desc": "多元宇宙本身：连接诸界的框架、法则与因果。"
+    },
+    {
+      "id": "anima",
+      "name": "Anima",
+      "en": "灵魂之界",
+      "color": "#059669",
+      "desc": "灵魂与梦的世界，生命之河的源头。"
+    },
+    {
+      "id": "mundus",
+      "name": "Mundus",
+      "en": "尘世",
+      "color": "#2563eb",
+      "desc": "物质与凡人的世界，故事的主舞台。"
+    },
+    {
+      "id": "caelum",
+      "name": "Caelum",
+      "en": "天穹之界",
+      "color": "#ec4899",
+      "desc": "天空与神明之界，光芒与法则的居所。"
+    },
+    {
+      "id": "finis",
+      "name": "Finis",
+      "en": "终末之界",
+      "color": "#b45309",
+      "desc": "毁灭与终末之界，诸界的终点。"
+    }
+  ]
+}

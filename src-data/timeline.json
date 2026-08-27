@@ -1,0 +1,113 @@
+{
+  "note": "各界域时间线相互独立：由于设定原因，不同界域的时间对应关系无法确认，因此不使用统一纪年。",
+  "universes": {
+    "general": {
+      "events": [
+        {
+          "seq": 1,
+          "date": "时间不可考",
+          "type": "大事记",
+          "universe": "general",
+          "title": "万界之裂",
+          "summary": "单一世界裂为诸界：Anima、Mundus、Caelum、Finis 诞生，裂缝化作界海，分隔诸界也连接诸界。",
+          "characters": ["织序者"],
+          "locations": ["界海"],
+          "link": "/events/general/sundering"
+        }
+      ]
+    },
+    "anima": {
+      "events": [
+        {
+          "seq": 1,
+          "date": "时间不可考",
+          "type": "事件",
+          "universe": "anima",
+          "title": "魂河决溢",
+          "summary": "魂河无征兆决溢，沉积的记忆涌上水面，灵魂被冲离支流。有人看见界海方向闪过裂缝。",
+          "characters": ["苏琳"],
+          "locations": ["魂河"],
+          "link": "/events/anima/river-surge"
+        }
+      ]
+    },
+    "mundus": {
+      "events": [
+        {
+          "seq": 1,
+          "date": "星历元年 · 秋",
+          "type": "大事记",
+          "universe": "mundus",
+          "title": "星陨之夜",
+          "summary": "Mundus 天穹星辰坠落，星辉之力涌入世间。银辉王国与星语教团在废墟上建立新秩序。",
+          "characters": ["艾琳·星语"],
+          "locations": ["银辉城"],
+          "link": "/events/mundus/starfall-night"
+        },
+        {
+          "seq": 2,
+          "date": "星历 289 年 · 春",
+          "type": "战役",
+          "universe": "mundus",
+          "title": "铁炉堡事变",
+          "summary": "灰烬之手潜入铁炉堡，夺走陨星之刃并纵火烧城，工匠议会一夜倾覆。",
+          "characters": ["凯尔·铁炉", "零"],
+          "locations": ["铁炉堡"],
+          "link": "/events/mundus/ironforge-incident"
+        },
+        {
+          "seq": 3,
+          "date": "星历 289 年 · 夏",
+          "type": "转折",
+          "universe": "mundus",
+          "title": "灰烬之战",
+          "summary": "银辉王国远征灰烬荒原，艾琳·星语与凯尔·铁炉结盟，夺回陨星之刃的半截残片。",
+          "characters": ["艾琳·星语", "凯尔·铁炉"],
+          "locations": ["灰烬荒原", "铁炉堡"],
+          "link": "/events/mundus/ashen-war"
+        },
+        {
+          "seq": 4,
+          "date": "星历 290 年 · 冬",
+          "type": "大事记",
+          "universe": "mundus",
+          "title": "王都之变",
+          "summary": "灰烬之手刺杀银辉王未遂，王都戒严，王室与教团的裂隙彻底公开。",
+          "characters": ["艾琳·星语", "零"],
+          "locations": ["银辉城"],
+          "link": "/events/mundus/kingdom-coup"
+        }
+      ]
+    },
+    "caelum": {
+      "events": [
+        {
+          "seq": 1,
+          "date": "时间不可考",
+          "type": "大事记",
+          "universe": "caelum",
+          "title": "神陨之日",
+          "summary": "Caelum 诸神一夜陨落，天穹失去光源。曦光圣女艾莉雅戴上日冕之冠，太阳重新升起。",
+          "characters": ["曦光·艾莉雅"],
+          "locations": ["云端圣殿"],
+          "link": "/events/caelum/day-of-godsfall"
+        }
+      ]
+    },
+    "finis": {
+      "events": [
+        {
+          "seq": 1,
+          "date": "时间不可考",
+          "type": "转折",
+          "universe": "finis",
+          "title": "归墟之门",
+          "summary": "归墟教团在终末废墟举行仪式，深渊之门睁开一条缝，诸界钟声齐鸣，界海开始躁动。",
+          "characters": ["末"],
+          "locations": ["终末废墟"],
+          "link": "/events/finis/ruin-gate"
+        }
+      ]
+    }
+  }
+}

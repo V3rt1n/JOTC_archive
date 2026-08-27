@@ -1,0 +1,29 @@
+/* 全局主题微调 —— 设定集专用配色 */
+
+:root {
+  --vp-c-brand-1: #6d4bd8;
+  --vp-c-brand-2: #825ee6;
+  --vp-c-brand-3: #6d4bd8;
+  --vp-c-brand-soft: rgba(109, 75, 216, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #6d4bd8 20%, #b45309 80%);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #6d4bd8 30%, #b45309 70%);
+}
+
+.dark {
+  --vp-c-brand-1: #9b84ec;
+  --vp-c-brand-2: #825ee6;
+  --vp-c-brand-3: #9b84ec;
+  --vp-c-brand-soft: rgba(155, 132, 236, 0.16);
+}
+
+/* 词条页首行的"示例"提示横幅 */
+.example-note {
+  border: 1px dashed var(--vp-c-brand-2);
+  background: var(--vp-c-brand-soft);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
