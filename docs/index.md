@@ -11,18 +11,12 @@ hero:
       link: /characters/
     - theme: alt
       text: 查看时间线
-      link: /timeline
+      link: /timeline/
 
 features:
-  - title: 词条库
-    details: 每个设定一条目，wiki 式互相链接，正文提及即跳转。
-    link: /glossary/
-  - title: 界域独立页面
-    details: 多元宇宙 / Anima / Mundus / Caelum / Finis 各有独立的角色、势力、地点、物品、事件页面。
+  - title: 角色一览
+    details: 多元宇宙 / Anima / Mundus / Caelum / Finis 各有独立的角色页面，按界域浏览全部角色。
     link: /characters/
-  - title: 角色卡片墙
-    details: 各界域角色页面自动生成卡片，身份、势力、状态一目了然。
-    link: /characters/mundus/
   - title: 事件时间线
     details: 各界域时间线相互独立，按界域分层展示，可筛选。
     link: /timeline/
