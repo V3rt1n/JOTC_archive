@@ -4,6 +4,7 @@ import './style.css'
 import TimelineView from './components/TimelineView.vue'
 import EntryGrid from './components/EntryGrid.vue'
 import UniversePortal from './components/UniversePortal.vue'
+import HomePortals from './components/HomePortals.vue'
 
 export default {
   extends: DefaultTheme,
@@ -12,5 +13,6 @@ export default {
     app.component('TimelineView', TimelineView)
     app.component('EntryGrid', EntryGrid)
     app.component('UniversePortal', UniversePortal)
+    app.component('HomePortals', HomePortals)
   },
 } satisfies Theme

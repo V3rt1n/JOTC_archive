@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
+import { spoilerPlugin } from './markdown/spoiler.ts'
 
 // 站点元信息 —— 改成你的小说名
 const siteTitle = 'JOTC 设定集'
@@ -10,6 +11,14 @@ export default defineConfig({
   title: siteTitle,
   description: siteDescription,
   cleanUrls: true,
+
+  // 自定义 Markdown 语法
+  markdown: {
+    config(md) {
+      // ||剧透文字|| —— 默认被黑条覆盖，鼠标悬停时显示
+      md.use(spoilerPlugin)
+    },
+  },
 
   // 允许存在指向已删除/尚未创建词条的链接（本地创作整理过程中常见），避免构建被死链中断
   ignoreDeadLinks: true,

@@ -164,22 +164,24 @@ function initialOf(name: string) {
   color: var(--vp-c-text-2);
 }
 
-/* 卡片网格 */
+/* 卡片列表：一行一个 */
 .eg-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
-/* 通用卡片 */
+/* 通用卡片（加长） */
 .eg-card {
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px;
-  border-radius: 14px;
+  justify-content: center;
+  gap: 10px;
+  min-height: 132px;
+  padding: 24px 28px;
+  border-radius: 16px;
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-alt);
   text-decoration: none;
@@ -211,11 +213,11 @@ function initialOf(name: string) {
   gap: 12px;
 }
 .eg-avatar {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   display: grid;
   place-items: center;
@@ -230,14 +232,14 @@ function initialOf(name: string) {
   min-width: 0;
 }
 .eg-name {
-  font-size: 15.5px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--vp-c-text-1);
 }
 .eg-role {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--vp-c-text-2);
-  margin-top: 2px;
+  margin-top: 3px;
 }
 .eg-status {
   font-size: 11.5px;
@@ -278,11 +280,11 @@ function initialOf(name: string) {
 }
 .eg-excerpt {
   margin: 0;
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--vp-c-text-2);
-  line-height: 1.6;
+  line-height: 1.7;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
