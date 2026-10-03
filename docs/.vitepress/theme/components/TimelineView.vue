@@ -119,13 +119,22 @@ const groups = computed(() => {
     <!-- 按纪元分组的时间线 -->
     <section v-for="g in groups" :key="g.id" class="tl-group">
       <h3 v-if="g.name" class="tl-period" :style="g.color ? { color: g.color } : {}">
-        <span class="tl-period-bar" :style="g.color ? { background: g.color } : {}" />
+        <span
+          class="tl-period-bar"
+          :style="g.color ? { background: `linear-gradient(180deg, ${g.color}, transparent)` } : {}"
+        />
         {{ g.name }}
       </h3>
 
       <ol class="tl-list">
         <li v-for="e in g.events" :key="e.seq" class="tl-item">
-          <div class="tl-marker" :style="{ borderColor: typeColor(e.type) }">
+          <div
+            class="tl-marker"
+            :style="{
+              borderColor: typeColor(e.type),
+              boxShadow: `0 0 0 4px var(--vp-c-bg), 0 0 12px ${typeColor(e.type)}66`,
+            }"
+          >
             <span class="tl-marker-core" :style="{ background: typeColor(e.type) }" />
           </div>
           <div class="tl-card">
@@ -269,6 +278,13 @@ const groups = computed(() => {
 .tl-card {
   flex: 1;
   min-width: 0;
+  padding: 10px 12px;
+  margin: -10px -12px;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+.tl-item:hover .tl-card {
+  background: var(--vp-c-brand-soft);
 }
 .tl-card-head {
   display: flex;

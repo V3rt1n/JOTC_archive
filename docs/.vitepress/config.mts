@@ -11,6 +11,23 @@ export default defineConfig({
   description: siteDescription,
   cleanUrls: true,
 
+  // 允许存在指向已删除/尚未创建词条的链接（本地创作整理过程中常见），避免构建被死链中断
+  ignoreDeadLinks: true,
+
+  // 内联 SVG favicon（多元宇宙星球图标，无需外部资源）
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: `data:image/svg+xml,${encodeURIComponent(
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6cf0"/><stop offset="1" stop-color="#5a3bbf"/></linearGradient></defs><circle cx="32" cy="32" r="28" fill="url(#g)"/><circle cx="23" cy="23" r="3.2" fill="#fff" opacity="0.85"/><circle cx="42" cy="19" r="2" fill="#fff" opacity="0.6"/><circle cx="39" cy="38" r="2.6" fill="#fff" opacity="0.7"/><circle cx="19" cy="40" r="1.6" fill="#fff" opacity="0.5"/><ellipse cx="32" cy="54" rx="19" ry="6" fill="#141220" opacity="0.3"/></svg>',
+        )}`,
+      },
+    ],
+  ],
+
   // 让 VitePress 可以直接 import 项目根目录 src-data/ 下的数据文件（时间线、界域等）
   vite: {
     resolve: {

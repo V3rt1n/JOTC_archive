@@ -173,21 +173,37 @@ function initialOf(name: string) {
 
 /* 通用卡片 */
 .eg-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-alt);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease;
+}
+.eg-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-2), transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 .eg-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--vp-c-brand-2);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 32px rgba(80, 50, 160, 0.16);
+}
+.eg-card:hover::before {
+  opacity: 1;
 }
 .eg-card-top {
   display: flex;
@@ -204,6 +220,10 @@ function initialOf(name: string) {
   display: grid;
   place-items: center;
   flex: none;
+  box-shadow:
+    0 0 0 3px var(--vp-c-bg),
+    0 0 0 5px var(--vp-c-brand-soft),
+    0 4px 12px rgba(20, 10, 60, 0.18);
 }
 .eg-id {
   flex: 1;
@@ -227,11 +247,13 @@ function initialOf(name: string) {
 }
 .eg-status.done {
   color: #059669;
-  background: rgba(5, 150, 105, 0.12);
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.2), rgba(5, 150, 105, 0.08));
+  border: 1px solid rgba(5, 150, 105, 0.22);
 }
 .eg-status.draft {
   color: #b45309;
-  background: rgba(180, 83, 9, 0.12);
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.2), rgba(180, 83, 9, 0.08));
+  border: 1px solid rgba(180, 83, 9, 0.22);
 }
 .eg-line {
   font-size: 12.5px;

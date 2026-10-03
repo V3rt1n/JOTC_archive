@@ -8,8 +8,8 @@ import { toEntry, sortByUniverse } from './entry-utils.ts'
  */
 export default createContentLoader('glossary/**/*.md', {
   excerpt: true,
-  filter: (f) => !f.endsWith('/index.md'),
+  globOptions: { ignore: ['**/index.md'] },
   transform(raw) {
-    return sortByUniverse(raw.map(toEntry))
+    return sortByUniverse(raw.filter((e) => !e.url.endsWith('/')).map(toEntry))
   },
 })

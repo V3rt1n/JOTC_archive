@@ -15,9 +15,8 @@ tags:
 
 ## 特征
 
-
+一望无际的沙漠，仙人掌生长在沙漠的地表，有时可以找到绿洲和聚落。
 
 ## 关联
 
-- 人物：[苏琳](/characters/anima/sulin)
-- 物品：[魂灯](/items/anima/soul-lantern)
+

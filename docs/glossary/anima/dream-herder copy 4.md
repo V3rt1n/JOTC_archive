@@ -1,16 +1,16 @@
 ---
-title: 梦牧
-name: 梦牧
+title: 恶魔
+name: 恶魔
 universe: anima
-role: 职衔
+role: 种族
 tags:
   - Anima
-  - 职业
+  - 种族
 ---
 
 ## 定义
 
-守护[魂河](/locations/anima/river-of-souls)、引导迷途灵魂的修行者，隶属于[安息圣所](/factions/anima/sanctuary-of-rest)。梦牧手持[魂灯](/items/anima/soul-lantern)行走于魂河的每条支流。
+恶魔是居住在地狱的种族，它们可能有智慧，不过对地上的一切智慧种族都十分敌对。恶魔擅长使用狱火和黑暗魔法，并且崇尚战争。
 
 ## 关联
 

@@ -21,5 +21,3 @@ tags:
 
 ## 关联
 
-- 人物：[苏琳](/characters/anima/sulin)
-- 物品：[魂灯](/items/anima/soul-lantern)

@@ -24,7 +24,10 @@ function countOf(id: string) {
   <div class="up-grid">
     <a v-for="u in universes" :key="u.id" class="up-card" :href="`${base}/${u.id}/`">
       <div class="up-top">
-        <span class="up-bar" :style="u.color ? { background: u.color } : {}" />
+        <span
+          class="up-bar"
+          :style="u.color ? { background: u.color, boxShadow: `0 0 12px ${u.color}88` } : {}"
+        />
         <div class="up-id">
           <div class="up-name">{{ u.name }}</div>
           <div v-if="u.en" class="up-en">{{ u.en }}</div>
@@ -45,21 +48,38 @@ function countOf(id: string) {
   margin: 16px 0 32px;
 }
 .up-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 18px;
-  border-radius: 12px;
+  border-radius: 16px;
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-alt);
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease;
+}
+.up-card::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--vp-c-brand-soft), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 .up-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--vp-c-brand-2);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 34px rgba(80, 50, 160, 0.16);
+}
+.up-card:hover::after {
+  opacity: 1;
 }
 .up-top {
   display: flex;
@@ -69,8 +89,10 @@ function countOf(id: string) {
 .up-bar {
   width: 8px;
   height: 3em;
-  border-radius: 4px;
+  border-radius: 6px;
   flex: none;
+  background-image: linear-gradient(180deg, currentColor, transparent);
+  box-shadow: 0 0 10px currentColor;
 }
 .up-id {
   flex: 1;

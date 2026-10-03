@@ -1,24 +1,259 @@
-/* 全局主题微调 —— 设定集专用配色 */
+/* ============================================================
+   JOTC 设定集 —— 多元宇宙主题美化
+   设计语言：紫罗兰主色 + 渐变光晕 + 毛玻璃 + 星空质感
+   ============================================================ */
 
+/* ---------- 字体 ---------- */
+:root {
+  --vp-font-family-base:
+    'Inter', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Noto Sans SC', 'Helvetica Neue', Arial, sans-serif;
+  --vp-font-family-mono:
+    'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular,
+    Consolas, 'Courier New', monospace;
+}
+
+/* ---------- 品牌色（亮色） ---------- */
 :root {
   --vp-c-brand-1: #6d4bd8;
-  --vp-c-brand-2: #825ee6;
-  --vp-c-brand-3: #6d4bd8;
-  --vp-c-brand-soft: rgba(109, 75, 216, 0.14);
+  --vp-c-brand-2: #8b6cf0;
+  --vp-c-brand-3: #5a3bbf;
+  --vp-c-brand-soft: rgba(109, 75, 216, 0.13);
 
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #6d4bd8 20%, #b45309 80%);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #6d4bd8 30%, #b45309 70%);
+  --vp-home-hero-name-background: linear-gradient(120deg, #6d4bd8 0%, #ec4899 45%, #b45309 100%);
+  --vp-home-hero-image-background-image:
+    radial-gradient(circle at 30% 40%, rgba(109, 75, 216, 0.32), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(236, 72, 153, 0.22), transparent 50%);
+  --vp-home-hero-image-filter: blur(44px);
+
+  --vp-custom-block-tip-border: #8b6cf0;
+  --vp-custom-block-tip-text: #6d4bd8;
+  --vp-custom-block-tip-bg: rgba(109, 75, 216, 0.08);
+
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.72);
+  --vp-nav-screen-bg-color: rgba(255, 255, 255, 0.92);
+
+  --vp-c-divider: #e7e3f3;
+  --vp-c-gutter: #ece9f8;
+  --vp-c-text-1: #2b2740;
+  --vp-c-text-2: #5c5670;
+  --vp-c-text-3: #8b86a0;
+  --vp-c-bg: #fdfcfe;
+  --vp-c-bg-alt: #f7f4fd;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f1edfb;
+  --vp-c-bg-soft-up: #ffffff;
 }
 
+/* ---------- 品牌色（暗色） ---------- */
 .dark {
-  --vp-c-brand-1: #9b84ec;
-  --vp-c-brand-2: #825ee6;
-  --vp-c-brand-3: #9b84ec;
-  --vp-c-brand-soft: rgba(155, 132, 236, 0.16);
+  --vp-c-brand-1: #a58cf4;
+  --vp-c-brand-2: #8b6cf0;
+  --vp-c-brand-3: #c4b2ff;
+  --vp-c-brand-soft: rgba(139, 108, 240, 0.2);
+
+  --vp-home-hero-name-background: linear-gradient(120deg, #a58cf4 0%, #f29ec7 45%, #e0a458 100%);
+  --vp-home-hero-image-background-image:
+    radial-gradient(circle at 30% 40%, rgba(139, 108, 240, 0.4), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(236, 72, 153, 0.28), transparent 50%);
+
+  --vp-custom-block-tip-border: #a58cf4;
+  --vp-custom-block-tip-text: #a58cf4;
+  --vp-custom-block-tip-bg: rgba(139, 108, 240, 0.14);
+
+  --vp-nav-bg-color: rgba(20, 18, 31, 0.72);
+  --vp-nav-screen-bg-color: rgba(20, 18, 31, 0.92);
+
+  --vp-c-divider: #2c2747;
+  --vp-c-gutter: #252140;
+  --vp-c-text-1: #ece9f8;
+  --vp-c-text-2: #b9b2d4;
+  --vp-c-text-3: #8d87a8;
+  --vp-c-bg: #141220;
+  --vp-c-bg-alt: #1a1730;
+  --vp-c-bg-elv: #1e1a36;
+  --vp-c-bg-soft: #221e3c;
+  --vp-c-bg-soft-up: #262248;
 }
 
-/* 词条页首行的"示例"提示横幅 */
+/* ---------- 全局背景：柔和星云光晕 ---------- */
+body {
+  background:
+    radial-gradient(1100px 560px at 88% -8%, rgba(109, 75, 216, 0.1), transparent 60%),
+    radial-gradient(900px 520px at -8% 28%, rgba(236, 72, 153, 0.07), transparent 55%),
+    radial-gradient(700px 420px at 55% 110%, rgba(180, 83, 9, 0.06), transparent 55%),
+    var(--vp-c-bg);
+}
+.dark body {
+  background:
+    radial-gradient(1100px 560px at 88% -8%, rgba(109, 75, 216, 0.18), transparent 60%),
+    radial-gradient(900px 520px at -8% 28%, rgba(236, 72, 153, 0.1), transparent 55%),
+    radial-gradient(700px 420px at 55% 110%, rgba(180, 83, 9, 0.08), transparent 55%),
+    var(--vp-c-bg);
+}
+
+/* 星点纹理（固定于视口底层，不干扰交互） */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 22%, rgba(139, 108, 240, 0.55), transparent 100%),
+    radial-gradient(1.5px 1.5px at 28% 68%, rgba(236, 72, 153, 0.4), transparent 100%),
+    radial-gradient(1px 1px at 42% 12%, rgba(255, 255, 255, 0.6), transparent 100%),
+    radial-gradient(1px 1px at 58% 42%, rgba(139, 108, 240, 0.45), transparent 100%),
+    radial-gradient(1.5px 1.5px at 72% 18%, rgba(255, 255, 255, 0.5), transparent 100%),
+    radial-gradient(1px 1px at 84% 58%, rgba(236, 72, 153, 0.4), transparent 100%),
+    radial-gradient(1.5px 1.5px at 92% 82%, rgba(180, 83, 9, 0.35), transparent 100%),
+    radial-gradient(1px 1px at 8% 88%, rgba(139, 108, 240, 0.45), transparent 100%),
+    radial-gradient(1px 1px at 64% 90%, rgba(255, 255, 255, 0.4), transparent 100%);
+}
+.dark body::before {
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 22%, rgba(165, 140, 244, 0.9), transparent 100%),
+    radial-gradient(1.5px 1.5px at 28% 68%, rgba(242, 158, 199, 0.7), transparent 100%),
+    radial-gradient(1px 1px at 42% 12%, rgba(255, 255, 255, 0.8), transparent 100%),
+    radial-gradient(1px 1px at 58% 42%, rgba(165, 140, 244, 0.75), transparent 100%),
+    radial-gradient(1.5px 1.5px at 72% 18%, rgba(255, 255, 255, 0.7), transparent 100%),
+    radial-gradient(1px 1px at 84% 58%, rgba(242, 158, 199, 0.7), transparent 100%),
+    radial-gradient(1.5px 1.5px at 92% 82%, rgba(224, 164, 88, 0.6), transparent 100%),
+    radial-gradient(1px 1px at 8% 88%, rgba(165, 140, 244, 0.75), transparent 100%),
+    radial-gradient(1px 1px at 64% 90%, rgba(255, 255, 255, 0.6), transparent 100%);
+}
+
+/* ---------- 导航栏：毛玻璃 ---------- */
+.VPNavBar {
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid color-mix(in srgb, var(--vp-c-divider) 70%, transparent);
+}
+.VPNavBar .title,
+.VPNavBar .VPNavBarMenuLink,
+.VPNavBar .VPNavBarExtra {
+  transition: color 0.2s ease;
+}
+
+/* ---------- 链接：渐变下划线动画 ---------- */
+.vp-doc a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  transition: background-size 0.28s ease, color 0.2s ease, opacity 0.2s ease;
+}
+.vp-doc a:hover {
+  background-size: 100% 1.5px;
+}
+
+/* ---------- 标题装饰 ---------- */
+.vp-doc h1 {
+  letter-spacing: 0.01em;
+}
+.vp-doc h2 {
+  position: relative;
+  padding-bottom: 10px;
+}
+.vp-doc h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-soft));
+}
+
+/* ---------- 表格 ---------- */
+.vp-doc table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(80, 50, 160, 0.06);
+}
+.vp-doc th {
+  background: linear-gradient(180deg, var(--vp-c-brand-soft), transparent);
+}
+
+/* ---------- 代码块 ---------- */
+.vp-doc div[class*='language-'] {
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px var(--vp-c-divider), 0 4px 16px rgba(20, 10, 60, 0.06);
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c8bcf2, #a58cf4);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a58cf4, #8b6cf0);
+  background-clip: padding-box;
+}
+
+/* ---------- 首页 hero ---------- */
+.VPHero .name {
+  filter: drop-shadow(0 4px 22px rgba(109, 75, 216, 0.35));
+}
+.VPHero .text {
+  max-width: 640px;
+}
+.VPHero .actions .VPButton.brand {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6d4bd8, #8b6cf0);
+  box-shadow: 0 6px 20px rgba(109, 75, 216, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.VPHero .actions .VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(109, 75, 216, 0.45);
+}
+.VPHero .actions .VPButton.alt {
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- 首页功能卡片 ---------- */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: var(--vp-c-bg-elv);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.VPFeature:hover {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand-2);
+  box-shadow: 0 14px 34px rgba(80, 50, 160, 0.14);
+}
+.VPFeature .icon {
+  border-radius: 12px;
+  background: var(--vp-c-brand-soft);
+}
+
+/* ---------- 提示框圆角 ---------- */
+.vp-doc .custom-block {
+  border-radius: 12px;
+}
+
+/* ---------- 页脚 ---------- */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  background: transparent;
+}
+
+/* ---------- 词条页首行的"示例"提示横幅 ---------- */
 .example-note {
   border: 1px dashed var(--vp-c-brand-2);
   background: var(--vp-c-brand-soft);
